@@ -1,0 +1,105 @@
+.starfield-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    background-color: #000;
+  }
+  
+  .stars-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: repeat;
+    background-size: 500px 500px;
+  }
+  
+  .stars-layer-1 {
+    background-image: 
+      radial-gradient(2px 2px at 50px 100px, #fff, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 150px 70px, #fff, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 250px 360px, #fff, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 390px 140px, #fff, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 430px 280px, #fff, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 460px 420px, #fff, rgba(0,0,0,0));
+    animation: twinkle-1 4s infinite;
+  }
+  
+  .stars-layer-2 {
+    background-image: 
+      radial-gradient(2px 2px at 125px 5px, #fff, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 250px 180px, #fff, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 325px 230px, #fff, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 110px 290px, #fff, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 480px 350px, #fff, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 65px 470px, #fff, rgba(0,0,0,0));
+    animation: twinkle-2 6s infinite;
+  }
+  
+  .stars-layer-3 {
+    background-image: 
+      radial-gradient(2px 2px at 210px 110px, #fff, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 350px 350px, #fff, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 160px 470px, #fff, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 475px 480px, #fff, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 495px 205px, #fff, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 295px 300px, #fff, rgba(0,0,0,0));
+    animation: twinkle-3 5s infinite;
+  }
+  
+  @keyframes twinkle-1 {
+    0%, 100% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.5); }
+  }
+  
+  @keyframes twinkle-2 {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.7); }
+  }
+  
+  @keyframes twinkle-3 {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.6); }
+  }
+  
+  .shooting-star {
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    width: 150px;
+    height: 2px;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+    animation: shoot 7s linear infinite;
+  }
+  
+  .shooting-star:nth-child(4) {
+    top: 30%;
+    animation-delay: 3s;
+  }
+  
+  .shooting-star:nth-child(5) {
+    top: 70%;
+    animation-delay: 5s;
+  }
+  
+  @keyframes shoot {
+    0% {
+      transform: translateX(0) rotate(-45deg);
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+    }
+    95% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(150vw) rotate(-45deg);
+      opacity: 0;
+    }
+  }

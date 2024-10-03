@@ -1,0 +1,66 @@
+
+  
+  .My-Landing-whatsapp-marketing {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .My-Landing-section-title {
+    color: #004d40;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+  
+  .My-Landing-card-carousel {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .My-Landing-card-container {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .My-Landing-card {
+    flex: 0 0 calc(33.333% - 2rem);
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .My-Landing-card-image {
+    height: 200px;
+    margin-bottom: 1rem;
+   }
+  
+  .My-Landing-carousel-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .My-Landing-carousel-btn {
+    background-color: #f0f0f0;
+    border: none;
+    color: #004d40;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 0.5rem;
+  }
+  
+  .My-Landing-carousel-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .My-Landing-carousel-btn.My-Landing-next {
+    background-color: rgba(1, 195, 125, 1);
+    color: white;
+  }

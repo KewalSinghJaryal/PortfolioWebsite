@@ -1,0 +1,117 @@
+
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 2rem ; */
+    /* background-color: #191919; */
+    color: white;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  .hero-content {
+    max-width: 50%;
+    padding: 0 6rem; /* Added padding to match navbar */
+    margin: 0rem 0rem;
+    
+  }
+  
+  h1 {
+    font-size: 4rem;
+    margin: 0.5rem 0;
+  }
+  
+  h2 {
+    color: #ffd700;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #a9a9a9;
+  }
+  
+  .hire-me {
+    background-color: #ffd700;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hire-me:hover {
+    background-color: #e6c200;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .icon {
+    background-color: #333;
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .icon:hover {
+    background-color: #444;
+  }
+  
+  .hero-image {
+    display: flex;
+    
+    max-width: 100%;
+    /* padding: 0 2rem; */
+    justify-content: end;
+
+  }
+  
+  .placeholder-image {
+    width: 80%;
+    height: 100%;
+    margin-left:20rem ;
+    background-color: #333;
+    border-radius: 10px; /* Added subtle rounding */
+  }
+  
+  @media (max-width: 768px) {
+    .hero-section {
+      flex-direction: column;
+      padding: 1rem;
+      justify-content: space-evenly;
+    }
+    
+    .hero-content, .hero-image {
+      max-width: 100%;
+      padding: 1rem 7rem;
+    }
+    .placeholder-image{
+        margin-left: 0rem;
+        justify-content: start;
+    }
+  
+    h1 {
+      font-size: 3rem;
+    }
+  
+    h2, h3 {
+      font-size: 1.2rem;
+    }
+  }
+
+  /* socials css */
+/* From Uiverse.io by vinodjangid07 */ 

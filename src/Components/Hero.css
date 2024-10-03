@@ -1,0 +1,195 @@
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0a0a0a56;
+  color: #ffffff;
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+.orbital-animation {
+  position: absolute;
+  top: 0;
+  left: -25%;
+  width: 75%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.orbit {
+  position: absolute;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: rotate 20s linear infinite;
+}
+
+.orbit::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 75%;
+  width: 25%;
+  height: 25%;
+  background-color: rgba(255, 255, 255, 0.089);
+  border-radius: 50%;
+}
+
+.orbit-1 {
+  width: 100%;
+  height: 100%;
+  top: 25%;
+  left: -25%;
+}
+
+.orbit-2 {
+  width: 150%;
+  height: 150%;
+  top: 0;
+  left: -50%;
+  animation-duration: 30s;
+}
+
+.orbit-3 {
+  width: 200%;
+  height: 200%;
+  top: -25%;
+  left: -75%;
+  animation-duration: 40s;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.hero-content {
+  max-width: 50%;
+  opacity: 0;
+  padding-left: 6rem;
+  transform: translateX(-50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hero-greeting {
+  font-size: 1.5rem;
+  color: #ffd700;
+}
+
+.hero-name {
+  font-size: 3rem;
+  margin: 0.5rem 0;
+}
+
+.hero-title {
+  font-size: 1.5rem;
+  color: #cccccc;
+  margin-bottom: 1rem;
+}
+
+.hero-cta {
+  background-color: #ffd700;
+  border-radius: 10px;
+  color: #0a0a0a;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-cta:hover {
+  background-color: #e5c100;
+}
+
+.hero-social {
+  margin-top: 1rem;
+}
+
+.social-icon {
+  display: inline-block;
+  margin-right: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.hero-image {
+  max-width: 45%;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-image.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content, .hero-image {
+    max-width: 100%;
+  }
+
+  .hero-content {
+    padding-left: 0rem;
+  }
+
+  .hero-image {
+    margin-top: 2rem;
+  }
+
+  .hero-name {
+    font-size: 2.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.25rem;
+  }
+
+  .orbital-animation {
+    left: -50%;
+    width: 150%;
+  }
+
+  .orbit-1 {
+    width: 150%;
+    height: 150%;
+    top: 0;
+    left: -25%;
+  }
+
+  .orbit-2 {
+    width: 200%;
+    height: 200%;
+    top: -25%;
+    left: -50%;
+  }
+
+  .orbit-3 {
+    width: 250%;
+    height: 250%;
+    top: -50%;
+    left: -75%;
+  }
+}
